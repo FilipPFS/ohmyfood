@@ -43,6 +43,17 @@ a {
     animation: spin 1s linear infinite;
 }
 
+.layout {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.main {
+    flex: 1;
+}
+
 @keyframes spin {
     to {
         transform: rotate(360deg);
