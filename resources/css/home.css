@@ -121,7 +121,7 @@
     }
 
     .restaurants_list {
-        grid-template-columns: repeat(2, 45%);
+        grid-template-columns: repeat(2, 46%);
         justify-content: space-between;
         gap: 40px;
     }

@@ -21,7 +21,6 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    background-color: red;
 }
 
 .hero_img {
@@ -177,4 +176,32 @@
 
 .block_info:nth-of-type(3) {
     animation-delay: 5s;
+}
+
+@media (min-width: 768px) {
+
+    .hero {
+        align-items: center;
+    }
+
+    .hero_img {
+        height: 300px;
+    }
+
+    .block {
+        width: 90%;
+        padding: 20px 50px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .hero_img {
+        height: 380px;
+    }
+
+    .block {
+        width: 70%;
+        padding: 40px 150px;
+        margin-top: -40px;
+    }
 }
