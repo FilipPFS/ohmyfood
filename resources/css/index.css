@@ -155,39 +155,44 @@
 }
 
 .block_info:nth-of-type(1) {
-  animation-delay: 3.5s;
+  animation-delay: 0.7s;
 }
 
 .block_info:nth-of-type(2) {
-  animation-delay: 4s;
+  animation-delay: 1.5s;
 }
 
 .block_info:nth-of-type(3) {
-  animation-delay: 5s;
+  animation-delay: 2.2s;
 }
 
 @media (min-width: 768px) {
   .resturant_hero {
     align-items: center;
   }
+
   .restaurant_hero_img {
     height: 300px;
   }
+
   .block {
     width: 90%;
     padding: 20px 50px;
   }
 }
+
 @media (min-width: 1024px) {
   .restaurant_hero_img {
     height: 380px;
   }
+
   .block {
     width: 70%;
     padding: 40px 150px;
     margin-top: -40px;
   }
 }
+
 .location_block {
   padding: 14px;
   display: flex;
@@ -301,50 +306,72 @@
   .logo_img {
     width: 15%;
   }
+
   .functioning {
     padding: 50px 100px;
   }
+
   .restaurants {
     padding: 50px 100px;
   }
+
   .restaurants_list {
     grid-template-columns: repeat(2, 46%);
     justify-content: space-between;
     gap: 40px;
   }
+
   .restaurants_card {
     width: 100%;
   }
 }
+
 @media (min-width: 1024px) {
   .functioning_list {
     flex-direction: row;
   }
+
   .functioning_card {
     width: 33%;
   }
 }
+
 @keyframes fadeInUp {
   from {
     opacity: 0;
     transform: translateY(30px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
   }
 }
-@keyframes spin {
-  to {
-    transform: rotate(360deg);
-  }
-}
+
 @keyframes fadeOut {
   to {
     opacity: 0;
     visibility: hidden;
   }
 }
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    opacity: 0.6;
+  }
+
+  50% {
+    transform: scale(1.1);
+    opacity: 1;
+  }
+
+  100% {
+    transform: scale(1);
+    opacity: 0.6;
+  }
+}
+
 :root {
   --primary-color: #9356dc;
   --bg-color-gray: #f6f6f6;
@@ -370,28 +397,27 @@ a {
   text-decoration: none;
 }
 
-.loader-overlay {
+.loader {
   position: fixed;
-  inset: 0;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
   background: white;
   display: flex;
   align-items: center;
   justify-content: center;
-  z-index: 100;
-  animation: fadeOut 0.5s ease 2.5s forwards;
+  z-index: 9999;
 }
 
-.spinner {
-  width: 50px;
-  height: 50px;
-  border: 6px solid #ddd;
-  border-top-color: var(--primary-color, #3498db);
-  border-radius: 50%;
-  animation: spin 1s linear infinite;
+.loader-logo {
+  width: fit-content;
+  height: 40px;
+  animation: pulse 1.5s infinite ease-in-out;
 }
 
 .layout {
-  display: flex;
+  display: none;
   min-height: 100vh;
   flex-direction: column;
   justify-content: space-between;
@@ -491,20 +517,24 @@ ul {
     width: 15%;
   }
 }
+
 @media (min-width: 1024px) {
   .footer {
     flex-direction: row;
     justify-content: flex-end;
     padding-top: 60px;
   }
+
   .footer_logo {
     order: 1;
     margin-left: 30px;
   }
+
   .footer_list {
     flex-direction: row;
     align-items: center;
   }
+
   .footer_link {
     margin-left: 20px;
   }
